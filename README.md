@@ -22,10 +22,10 @@ as isolated demos.
 
 | Project | What it exercises | Connection to rock reshaping |
 | --- | --- | --- |
-| `isaac-lab-manipulation` | Reproduces a standard Isaac Lab manipulation baseline with `rsl_rl`, evaluation scripts, and unchanged task definitions. | Establishes the robot-learning and experiment-running baseline before adding custom physics. |
-| `excavation-rl` | Builds a granular excavation setting with a custom substrate and training loop. | Tests the difficulty of coupling contact-rich material simulation with RL under limited time and compute. |
-| `cluttered-pick` | Returns to Isaac Lab for a bounded contact-rich manipulation diagnostic using a rigid-body granular proxy. | Keeps the material-manipulation theme while reducing simulator and infrastructure risk. |
-| `fracturegraph-control` | Adds graph transition data, a MeshGraphNet-style dynamics surrogate, and target-geometry planning. | Covers the part of the proposal closest to GNN-based fracture prediction and control toward a desired shape. |
+| [`isaac-lab-manipulation`](https://github.com/Yang251552/isaac-lab-manipulation) | Reproduces a standard Isaac Lab manipulation baseline with `rsl_rl`, evaluation scripts, and unchanged task definitions. | Establishes the robot-learning and experiment-running baseline before adding custom physics. |
+| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | Builds a granular excavation setting with a custom substrate and training loop. | Tests the difficulty of coupling contact-rich material simulation with RL under limited time and compute. |
+| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | Returns to Isaac Lab for a bounded contact-rich manipulation diagnostic using a rigid-body granular proxy. | Keeps the material-manipulation theme while reducing simulator and infrastructure risk. |
+| this repo | Adds graph transition data, a MeshGraphNet-style dynamics surrogate, and target-geometry planning. | Covers the part of the proposal closest to GNN-based fracture prediction and control toward a desired shape. |
 
 Within that preparation set, this project is a bridge between the earlier
 robot-learning work and the proposed rock-reshaping stack. It does not attempt
