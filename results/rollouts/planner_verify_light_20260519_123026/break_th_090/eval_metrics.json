@@ -1,0 +1,116 @@
+{
+  "rows": [
+    {
+      "target": "rectangle_cut",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9428,
+      "score": 0.9317,
+      "actions": 5,
+      "mean_force": 0.503,
+      "undercut": 0.6458,
+      "overbreak": 0.0019
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9329,
+      "score": 0.9235,
+      "actions": 5,
+      "mean_force": 0.4701,
+      "undercut": 0.7917,
+      "overbreak": 0.0
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 2,
+      "method": "cem_surrogate",
+      "final_iou": 0.941,
+      "score": 0.9285,
+      "actions": 5,
+      "mean_force": 0.5304,
+      "undercut": 0.6458,
+      "overbreak": 0.0038
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 3,
+      "method": "cem_surrogate",
+      "final_iou": 0.9495,
+      "score": 0.9374,
+      "actions": 5,
+      "mean_force": 0.5621,
+      "undercut": 0.5625,
+      "overbreak": 0.0019
+    },
+    {
+      "target": "circular_notch",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9449,
+      "score": 0.9354,
+      "actions": 5,
+      "mean_force": 0.4781,
+      "undercut": 0.7045,
+      "overbreak": 0.0
+    },
+    {
+      "target": "circular_notch",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9602,
+      "score": 0.9468,
+      "actions": 5,
+      "mean_force": 0.6254,
+      "undercut": 0.4773,
+      "overbreak": 0.0019
+    },
+    {
+      "target": "circular_notch",
+      "seed": 2,
+      "method": "cem_surrogate",
+      "final_iou": 0.9362,
+      "score": 0.9218,
+      "actions": 5,
+      "mean_force": 0.5298,
+      "undercut": 0.7273,
+      "overbreak": 0.0075
+    },
+    {
+      "target": "circular_notch",
+      "seed": 3,
+      "method": "cem_surrogate",
+      "final_iou": 0.9416,
+      "score": 0.9337,
+      "actions": 5,
+      "mean_force": 0.3933,
+      "undercut": 0.75,
+      "overbreak": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "target": "circular_notch",
+      "method": "cem_surrogate",
+      "runs": 4,
+      "mean_final_iou": 0.9457,
+      "best_final_iou": 0.9602,
+      "mean_score": 0.9344,
+      "mean_force": 0.5067,
+      "mean_undercut": 0.6648,
+      "mean_overbreak": 0.0024
+    },
+    {
+      "target": "rectangle_cut",
+      "method": "cem_surrogate",
+      "runs": 4,
+      "mean_final_iou": 0.9415,
+      "best_final_iou": 0.9495,
+      "mean_score": 0.9303,
+      "mean_force": 0.5164,
+      "mean_undercut": 0.6614,
+      "mean_overbreak": 0.0019
+    }
+  ]
+}

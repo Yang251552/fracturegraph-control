@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "target": "rectangle_cut",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9429,
+      "score": 0.9322,
+      "actions": 5,
+      "mean_force": 0.534,
+      "undercut": 0.6667,
+      "overbreak": 0.0
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9361,
+      "score": 0.9245,
+      "actions": 5,
+      "mean_force": 0.5287,
+      "undercut": 0.7292,
+      "overbreak": 0.0019
+    },
+    {
+      "target": "circular_notch",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9463,
+      "score": 0.9319,
+      "actions": 5,
+      "mean_force": 0.5782,
+      "undercut": 0.6136,
+      "overbreak": 0.0056
+    },
+    {
+      "target": "circular_notch",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9366,
+      "score": 0.928,
+      "actions": 5,
+      "mean_force": 0.4311,
+      "undercut": 0.8182,
+      "overbreak": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "target": "circular_notch",
+      "method": "cem_surrogate",
+      "runs": 2,
+      "mean_final_iou": 0.9415,
+      "best_final_iou": 0.9463,
+      "mean_score": 0.93,
+      "mean_force": 0.5047,
+      "mean_undercut": 0.7159,
+      "mean_overbreak": 0.0028
+    },
+    {
+      "target": "rectangle_cut",
+      "method": "cem_surrogate",
+      "runs": 2,
+      "mean_final_iou": 0.9395,
+      "best_final_iou": 0.9429,
+      "mean_score": 0.9284,
+      "mean_force": 0.5313,
+      "mean_undercut": 0.6979,
+      "mean_overbreak": 0.0009
+    }
+  ]
+}

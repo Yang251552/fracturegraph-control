@@ -1,0 +1,21 @@
+planner: cem
+horizon: 5
+population: 384
+elite_frac: 0.15
+iterations: 6
+surrogate_break_threshold: 0.45
+surrogate_node_threshold: 0.5
+action_space:
+  impact_x:
+  - 0
+  - 23
+  impact_y:
+  - 0
+  - 23
+  force:
+  - 0.2
+  - 1.0
+objective:
+  target_iou_weight: 1.0
+  action_cost_weight: 0.02
+  overbreak_penalty: 0.5

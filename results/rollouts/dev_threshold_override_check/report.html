@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FractureGraph-Control Report</title>
+  <style>
+    body { margin: 0; font-family: Inter, Arial, sans-serif; color: #20242a; background: #f7f9fb; }
+    main { max-width: 1180px; margin: 0 auto; padding: 36px 24px 60px; }
+    h1 { font-size: 30px; margin: 0 0 8px; }
+    p { color: #56606d; line-height: 1.55; }
+    table { border-collapse: collapse; background: white; width: 100%; margin: 24px 0; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e6e9ee; text-align: left; font-size: 14px; }
+    th { background: #eef2f6; }
+    figure { margin: 26px 0; background: white; padding: 16px; border: 1px solid #e3e7ed; }
+    img { max-width: 100%; display: block; }
+    figcaption { margin-top: 8px; color: #687381; font-size: 13px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>FractureGraph-Control</h1>
+  <p>Compact 2D fracture-control prototype with graph data, learned surrogate hooks, CEM planning, and rollout diagnostics.</p>
+  <table>
+    <thead><tr><th>target</th><th>method</th><th>runs</th><th>mean_final_iou</th><th>best_final_iou</th><th>mean_score</th><th>mean_force</th><th>mean_undercut</th><th>mean_overbreak</th></tr></thead>
+    <tbody><tr><td>diagonal_bevel</td><td>cem_oracle</td><td>1</td><td>0.9921</td><td>0.9921</td><td>0.9835</td><td>0.4276</td><td>0.3333</td><td>0.0</td></tr><tr><td>diagonal_bevel</td><td>cem_surrogate</td><td>1</td><td>0.9766</td><td>0.9766</td><td>0.9703</td><td>0.3136</td><td>1.0</td><td>0.0</td></tr><tr><td>diagonal_bevel</td><td>greedy</td><td>1</td><td>0.9766</td><td>0.9766</td><td>0.9723</td><td>0.212</td><td>1.0</td><td>0.0</td></tr><tr><td>diagonal_bevel</td><td>random</td><td>1</td><td>0.9414</td><td>0.9414</td><td>0.9134</td><td>0.5016</td><td>1.0</td><td>0.036</td></tr><tr><td>triangle_wedge</td><td>cem_oracle</td><td>1</td><td>0.957</td><td>0.957</td><td>0.9468</td><td>0.4113</td><td>1.0</td><td>0.0041</td></tr><tr><td>triangle_wedge</td><td>cem_surrogate</td><td>1</td><td>0.9609</td><td>0.9609</td><td>0.9566</td><td>0.2183</td><td>1.0</td><td>0.0</td></tr><tr><td>triangle_wedge</td><td>greedy</td><td>1</td><td>0.9609</td><td>0.9609</td><td>0.9567</td><td>0.2109</td><td>1.0</td><td>0.0</td></tr><tr><td>triangle_wedge</td><td>random</td><td>1</td><td>0.9141</td><td>0.9141</td><td>0.8769</td><td>0.6369</td><td>1.0</td><td>0.0488</td></tr></tbody>
+  </table>
+  <figure><img src="triangle_wedge.seed_1.random.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.random.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.greedy.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.greedy.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.cem_surrogate.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.cem_surrogate.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.cem_oracle.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.cem_oracle.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.random.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.random.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.greedy.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.greedy.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.cem_surrogate.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.cem_surrogate.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.cem_oracle.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.cem_oracle.svg</figcaption></figure>
+</main>
+</body>
+</html>

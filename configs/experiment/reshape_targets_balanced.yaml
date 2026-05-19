@@ -1,0 +1,26 @@
+seed: 0
+data_config: configs/data/lattice_24_balanced.yaml
+model_config: configs/model/meshgnn_balanced.yaml
+planner_config: configs/planner/cem_balanced.yaml
+
+targets:
+  - type: triangle_wedge
+    size: 24
+    margin: 3
+  - type: diagonal_bevel
+    size: 24
+    margin: 4
+  - type: rectangle_cut
+    size: 24
+    margin: 4
+  - type: circular_notch
+    size: 24
+    margin: 3
+
+eval:
+  seeds: [0, 1]
+  compare:
+    - random
+    - greedy
+    - cem_surrogate
+    - cem_oracle

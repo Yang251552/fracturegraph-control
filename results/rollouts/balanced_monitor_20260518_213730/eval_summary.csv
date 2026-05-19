@@ -1,0 +1,17 @@
+target,method,runs,mean_final_iou,best_final_iou,mean_score,mean_force
+circular_notch,cem_oracle,2,0.9482,0.9499,0.936,0.5381
+circular_notch,cem_surrogate,2,0.943,0.9462,0.9313,0.4955
+circular_notch,greedy,2,0.9681,0.9725,0.953,0.6823
+circular_notch,random,2,0.9081,0.9178,0.885,0.5462
+diagonal_bevel,cem_oracle,2,0.9834,0.986,0.9733,0.3956
+diagonal_bevel,cem_surrogate,2,0.9869,0.9912,0.9808,0.3049
+diagonal_bevel,greedy,2,0.9895,0.9947,0.9832,0.2926
+diagonal_bevel,random,2,0.9575,0.9601,0.9341,0.5321
+rectangle_cut,cem_oracle,2,0.9287,0.9296,0.9197,0.4302
+rectangle_cut,cem_surrogate,2,0.9539,0.9564,0.9411,0.5909
+rectangle_cut,greedy,2,0.9761,0.9869,0.963,0.6516
+rectangle_cut,random,2,0.8881,0.908,0.8609,0.5744
+triangle_wedge,cem_oracle,2,0.9774,0.9808,0.9713,0.3038
+triangle_wedge,cem_surrogate,2,0.9773,0.979,0.9691,0.3631
+triangle_wedge,greedy,2,0.9817,0.9894,0.9767,0.253
+triangle_wedge,random,2,0.9314,0.934,0.8975,0.6028

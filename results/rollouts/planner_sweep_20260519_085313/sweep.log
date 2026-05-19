@@ -1,0 +1,269 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ubuntu/.netrc.
+wandb: Currently logged in as: yangchenghan2515 (yangchenghan2515-eth-z-rich) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run s84mc1x3
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/ubuntu/fracturegraph-control/wandb/run-20260519_065330-s84mc1x3
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run planner-sweep-524mg3ns-20260519_085313
+wandb: ⭐️ View project at https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control
+wandb: 🚀 View run at https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/s84mc1x3
+sweep: running checkpoint_threshold
+Loaded surrogate thresholds: edge_break=0.95, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9491,
+    "best_final_iou": 0.95,
+    "mean_score": 0.9392,
+    "mean_force": 0.5022,
+    "mean_undercut": 0.6478,
+    "mean_overbreak": 0.0
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9344,
+    "best_final_iou": 0.9376,
+    "mean_score": 0.9234,
+    "mean_force": 0.5041,
+    "mean_undercut": 0.75,
+    "mean_overbreak": 0.0019
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/checkpoint_threshold/report.html
+sweep: running break_th_085
+Loaded surrogate thresholds: edge_break=0.85, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9375,
+    "best_final_iou": 0.9433,
+    "mean_score": 0.9293,
+    "mean_force": 0.4074,
+    "mean_undercut": 0.8068,
+    "mean_overbreak": 0.0
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9336,
+    "best_final_iou": 0.9343,
+    "mean_score": 0.9225,
+    "mean_force": 0.505,
+    "mean_undercut": 0.7604,
+    "mean_overbreak": 0.0019
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_085/report.html
+sweep: running break_th_090
+Loaded surrogate thresholds: edge_break=0.90, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9526,
+    "best_final_iou": 0.9602,
+    "mean_score": 0.9411,
+    "mean_force": 0.5517,
+    "mean_undercut": 0.5909,
+    "mean_overbreak": 0.0009
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9378,
+    "best_final_iou": 0.9428,
+    "mean_score": 0.9276,
+    "mean_force": 0.4866,
+    "mean_undercut": 0.7188,
+    "mean_overbreak": 0.0009
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_090/report.html
+sweep: running break_th_095
+Loaded surrogate thresholds: edge_break=0.95, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9491,
+    "best_final_iou": 0.95,
+    "mean_score": 0.9392,
+    "mean_force": 0.5022,
+    "mean_undercut": 0.6478,
+    "mean_overbreak": 0.0
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9344,
+    "best_final_iou": 0.9376,
+    "mean_score": 0.9234,
+    "mean_force": 0.5041,
+    "mean_undercut": 0.75,
+    "mean_overbreak": 0.0019
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_095/report.html
+sweep: running break_th_090_budget
+Loaded surrogate thresholds: edge_break=0.90, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9415,
+    "best_final_iou": 0.9463,
+    "mean_score": 0.93,
+    "mean_force": 0.5047,
+    "mean_undercut": 0.7159,
+    "mean_overbreak": 0.0028
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9395,
+    "best_final_iou": 0.9429,
+    "mean_score": 0.9284,
+    "mean_force": 0.5313,
+    "mean_undercut": 0.6979,
+    "mean_overbreak": 0.0009
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_090_budget/report.html
+sweep: running break_th_090_lighter_cost
+Loaded surrogate thresholds: edge_break=0.90, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9431,
+    "best_final_iou": 0.9497,
+    "mean_score": 0.9334,
+    "mean_force": 0.5283,
+    "mean_undercut": 0.6819,
+    "mean_overbreak": 0.0037
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9404,
+    "best_final_iou": 0.9479,
+    "mean_score": 0.9328,
+    "mean_force": 0.5078,
+    "mean_undercut": 0.6979,
+    "mean_overbreak": 0.0
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_090_lighter_cost/report.html
+sweep: running break_th_090_lighter_overbreak
+Loaded surrogate thresholds: edge_break=0.90, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9499,
+    "best_final_iou": 0.9532,
+    "mean_score": 0.9405,
+    "mean_force": 0.5516,
+    "mean_undercut": 0.6022,
+    "mean_overbreak": 0.0028
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9377,
+    "best_final_iou": 0.9425,
+    "mean_score": 0.9287,
+    "mean_force": 0.5215,
+    "mean_undercut": 0.6979,
+    "mean_overbreak": 0.0029
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_090_lighter_overbreak/report.html
+sweep: running break_th_090_h6_budget
+Loaded surrogate thresholds: edge_break=0.90, node_alive=0.30, device=cuda
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9358,
+    "best_final_iou": 0.9448,
+    "mean_score": 0.9274,
+    "mean_force": 0.403,
+    "mean_undercut": 0.8181,
+    "mean_overbreak": 0.0009
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9418,
+    "best_final_iou": 0.9441,
+    "mean_score": 0.9287,
+    "mean_force": 0.5354,
+    "mean_undercut": 0.625,
+    "mean_overbreak": 0.0047
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/break_th_090_h6_budget/report.html
+sweep: best rows by mean_final_iou
+  circular_notch break_th_090 iou=0.9526 undercut=0.5909 overbreak=0.0009
+  circular_notch break_th_090_lighter_overbreak iou=0.9499 undercut=0.6022 overbreak=0.0028
+  circular_notch checkpoint_threshold iou=0.9491 undercut=0.6478 overbreak=0.0000
+  circular_notch break_th_095 iou=0.9491 undercut=0.6478 overbreak=0.0000
+  circular_notch break_th_090_lighter_cost iou=0.9431 undercut=0.6819 overbreak=0.0037
+  rectangle_cut break_th_090_h6_budget iou=0.9418 undercut=0.6250 overbreak=0.0047
+wandb: updating run metadata
+wandb: updating run metadata; uploading history steps 14-15, summary, console lines 8-14
+wandb: uploading history steps 14-15, summary, console lines 8-14; uploading wandb-summary.json; uploading config.yaml; uploading output.log
+wandb: uploading history steps 14-15, summary, console lines 8-14
+wandb: uploading data
+wandb: 
+wandb: Run history:
+wandb: rollout/action_cost_weight ██████████▁▁▁▁██
+wandb:     rollout/best_final_iou ▅▂▃▁█▃▅▂▄▃▅▅▆▃▄▄
+wandb:            rollout/horizon ▁▁▁▁▁▁▁▁▁▁▁▁▁▁██
+wandb:         rollout/iterations ▁▁▁▁▁▁▁▁██▁▁▁▁██
+wandb:     rollout/mean_final_iou ▇▁▂▁█▃▇▁▄▃▄▄▇▃▂▄
+wandb:         rollout/mean_force ▆▆▁▆█▅▆▆▆▇▇▆█▇▁▇
+wandb:     rollout/mean_overbreak ▁▄▁▄▂▂▁▄▅▂▇▁▅▅▂█
+wandb:         rollout/mean_score ▇▁▄▁█▃▇▁▄▃▅▅█▃▃▃
+wandb:      rollout/mean_undercut ▃▆█▆▁▅▃▆▅▄▄▄▁▄█▂
+wandb:  rollout/overbreak_penalty ████████████▁▁██
+wandb:                         +2 ...
+wandb: 
+wandb: Run summary:
+wandb:            break_threshold 0.90
+wandb:                  completed True
+wandb: rollout/action_cost_weight 0.02
+wandb:     rollout/best_final_iou 0.9441
+wandb:            rollout/horizon 6
+wandb:         rollout/iterations 6
+wandb:     rollout/mean_final_iou 0.9418
+wandb:         rollout/mean_force 0.5354
+wandb:     rollout/mean_overbreak 0.0047
+wandb:         rollout/mean_score 0.9287
+wandb:                         +7 ...
+wandb: 
+wandb: 🚀 View run planner-sweep-524mg3ns-20260519_085313 at: https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/s84mc1x3
+wandb: ⭐️ View project at: https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260519_065330-s84mc1x3/logs
+sweep: wrote summary to /home/ubuntu/fracturegraph-control/results/rollouts/planner_sweep_20260519_085313/sweep_summary.csv

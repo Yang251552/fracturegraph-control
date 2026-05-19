@@ -1,0 +1,20 @@
+seed: 1
+data_config: configs/data/lattice_16_dev.yaml
+model_config: configs/model/meshgnn_small.yaml
+planner_config: configs/planner/cem_dev.yaml
+
+targets:
+  - type: triangle_wedge
+    size: 16
+    margin: 2
+  - type: diagonal_bevel
+    size: 16
+    margin: 3
+
+eval:
+  seeds: [1]
+  compare:
+    - random
+    - greedy
+    - cem_surrogate
+    - cem_oracle

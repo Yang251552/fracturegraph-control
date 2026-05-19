@@ -1,0 +1,17 @@
+seed: 0
+data_config: configs/data/lattice_24_balanced.yaml
+model_config: configs/model/meshgnn_balanced.yaml
+planner_config: results/rollouts/planner_sweep_20260519_085313/_configs/break_th_090_lighter_overbreak.planner.yaml
+targets:
+- type: rectangle_cut
+  size: 24
+  margin: 4
+- type: circular_notch
+  size: 24
+  margin: 3
+eval:
+  seeds:
+  - 0
+  - 1
+  compare:
+  - cem_surrogate

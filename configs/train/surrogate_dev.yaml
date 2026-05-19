@@ -1,0 +1,19 @@
+seed: 0
+batch_size: 8
+epochs: 4
+lr: 0.0007
+weight_decay: 0.00001
+gradient_clip: 1.0
+
+loss:
+  edge_bce_weight: 1.0
+  node_bce_weight: 0.25
+  shape_iou_weight: 0.0
+
+logging:
+  wandb: false
+  print_every_batches: 50
+  save_every: 2
+
+checkpoint:
+  dir: results/checkpoints/dev

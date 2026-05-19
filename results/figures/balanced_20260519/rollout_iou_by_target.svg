@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="1200" height="520" fill="#f8fafc"/>
+<style>
+  .title { font: 700 24px Inter, Arial, sans-serif; fill: #20242a; }
+  .subtitle { font: 13px Inter, Arial, sans-serif; fill: #56606d; }
+  .axis { stroke: #94a3b8; stroke-width: 1; }
+  .grid { stroke: #e2e8f0; stroke-width: 1; }
+  .tick { font: 11px Inter, Arial, sans-serif; fill: #64748b; }
+  .label { font: 12px Inter, Arial, sans-serif; fill: #334155; }
+  .small { font: 11px Inter, Arial, sans-serif; fill: #475569; }
+  .legend { font: 12px Inter, Arial, sans-serif; fill: #1f2937; }
+</style>
+<text x="48" y="42" class="title">Rollout final IoU by target</text>
+<text x="48" y="65" class="subtitle">524mg3ns checkpoint evaluated with simulator execution. Surrogate CEM is strong on wedge/bevel, weaker on rectangle/circular targets.</text>
+<line x1="80" y1="424.0" x2="960" y2="424.0" class="grid"/>
+<text x="70" y="428.0" text-anchor="end" class="tick">0.84</text>
+<line x1="80" y1="341.5" x2="960" y2="341.5" class="grid"/>
+<text x="70" y="345.5" text-anchor="end" class="tick">0.88</text>
+<line x1="80" y1="259.0" x2="960" y2="259.0" class="grid"/>
+<text x="70" y="263.0" text-anchor="end" class="tick">0.92</text>
+<line x1="80" y1="176.5" x2="960" y2="176.5" class="grid"/>
+<text x="70" y="180.5" text-anchor="end" class="tick">0.96</text>
+<line x1="80" y1="94.0" x2="960" y2="94.0" class="grid"/>
+<text x="70" y="98.0" text-anchor="end" class="tick">1.00</text>
+<line x1="80" y1="424" x2="960" y2="424" class="axis"/>
+<line x1="80" y1="94" x2="80" y2="424" class="axis"/>
+<text x="190.0" y="450" text-anchor="middle" class="tick">triangle wedge</text>
+<rect x="110.0" y="235.5" width="34" height="188.5" fill="#94a3b8" rx="3"/>
+<text x="127.0" y="230.5" text-anchor="middle" class="tick">0.931</text>
+<rect x="152.0" y="131.7" width="34" height="292.3" fill="#16a34a" rx="3"/>
+<text x="169.0" y="126.7" text-anchor="middle" class="tick">0.982</text>
+<rect x="194.0" y="140.8" width="34" height="283.2" fill="#2563eb" rx="3"/>
+<text x="211.0" y="135.8" text-anchor="middle" class="tick">0.977</text>
+<rect x="236.0" y="140.6" width="34" height="283.4" fill="#9333ea" rx="3"/>
+<text x="253.0" y="135.6" text-anchor="middle" class="tick">0.977</text>
+<text x="410.0" y="450" text-anchor="middle" class="tick">diagonal bevel</text>
+<rect x="330.0" y="181.7" width="34" height="242.3" fill="#94a3b8" rx="3"/>
+<text x="347.0" y="176.7" text-anchor="middle" class="tick">0.958</text>
+<rect x="372.0" y="115.7" width="34" height="308.3" fill="#16a34a" rx="3"/>
+<text x="389.0" y="110.7" text-anchor="middle" class="tick">0.990</text>
+<rect x="414.0" y="121.0" width="34" height="303.0" fill="#2563eb" rx="3"/>
+<text x="431.0" y="116.0" text-anchor="middle" class="tick">0.987</text>
+<rect x="456.0" y="128.2" width="34" height="295.8" fill="#9333ea" rx="3"/>
+<text x="473.0" y="123.2" text-anchor="middle" class="tick">0.983</text>
+<text x="630.0" y="450" text-anchor="middle" class="tick">rectangle cut</text>
+<rect x="550.0" y="324.8" width="34" height="99.2" fill="#94a3b8" rx="3"/>
+<text x="567.0" y="319.8" text-anchor="middle" class="tick">0.888</text>
+<rect x="592.0" y="143.3" width="34" height="280.7" fill="#16a34a" rx="3"/>
+<text x="609.0" y="138.3" text-anchor="middle" class="tick">0.976</text>
+<rect x="634.0" y="189.1" width="34" height="234.9" fill="#2563eb" rx="3"/>
+<text x="651.0" y="184.1" text-anchor="middle" class="tick">0.954</text>
+<rect x="676.0" y="241.1" width="34" height="182.9" fill="#9333ea" rx="3"/>
+<text x="693.0" y="236.1" text-anchor="middle" class="tick">0.929</text>
+<text x="850.0" y="450" text-anchor="middle" class="tick">circular notch</text>
+<rect x="770.0" y="283.5" width="34" height="140.5" fill="#94a3b8" rx="3"/>
+<text x="787.0" y="278.5" text-anchor="middle" class="tick">0.908</text>
+<rect x="812.0" y="159.8" width="34" height="264.2" fill="#16a34a" rx="3"/>
+<text x="829.0" y="154.8" text-anchor="middle" class="tick">0.968</text>
+<rect x="854.0" y="211.6" width="34" height="212.4" fill="#2563eb" rx="3"/>
+<text x="871.0" y="206.6" text-anchor="middle" class="tick">0.943</text>
+<rect x="896.0" y="200.8" width="34" height="223.2" fill="#9333ea" rx="3"/>
+<text x="913.0" y="195.8" text-anchor="middle" class="tick">0.948</text>
+<rect x="995" y="98" width="16" height="16" fill="#94a3b8" rx="2"/>
+<text x="1019" y="111" class="legend">random</text>
+<rect x="995" y="128" width="16" height="16" fill="#16a34a" rx="2"/>
+<text x="1019" y="141" class="legend">greedy</text>
+<rect x="995" y="158" width="16" height="16" fill="#2563eb" rx="2"/>
+<text x="1019" y="171" class="legend">cem_surrogate</text>
+<rect x="995" y="188" width="16" height="16" fill="#9333ea" rx="2"/>
+<text x="1019" y="201" class="legend">cem_oracle</text>
+</svg>

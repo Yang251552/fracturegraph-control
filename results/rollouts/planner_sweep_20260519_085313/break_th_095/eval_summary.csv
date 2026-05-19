@@ -1,0 +1,3 @@
+target,method,runs,mean_final_iou,best_final_iou,mean_score,mean_force,mean_undercut,mean_overbreak
+circular_notch,cem_surrogate,2,0.9491,0.95,0.9392,0.5022,0.6478,0.0
+rectangle_cut,cem_surrogate,2,0.9344,0.9376,0.9234,0.5041,0.75,0.0019

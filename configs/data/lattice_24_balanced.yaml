@@ -1,0 +1,22 @@
+grid_size: 24
+connectivity: eight_connected
+num_train: 40000
+num_val: 5000
+num_test: 5000
+episode_length: 6
+max_initial_damage: 0.05
+
+impact:
+  force_min: 0.2
+  force_max: 1.0
+  radius: 2.5
+
+material:
+  fracture_threshold_mean: 0.55
+  fracture_threshold_std: 0.08
+  noise_std: 0.03
+  damage_decay: 0.85
+  damage_gain: 0.45
+
+output:
+  path: data/lattice_24_balanced

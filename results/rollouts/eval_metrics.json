@@ -1,0 +1,20 @@
+[
+  {
+    "method": "random",
+    "final_iou": "0.930",
+    "score": "0.902",
+    "actions": 4
+  },
+  {
+    "method": "greedy",
+    "final_iou": "0.968",
+    "score": "0.955",
+    "actions": 4
+  },
+  {
+    "method": "cem_oracle",
+    "final_iou": "0.969",
+    "score": "0.960",
+    "actions": 4
+  }
+]

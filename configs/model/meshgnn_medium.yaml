@@ -1,0 +1,26 @@
+model: mesh_graph_net
+hidden_dim: 192
+message_passing_steps: 10
+dropout: 0.05
+
+node_features:
+  - x
+  - y
+  - boundary
+  - alive
+  - damage
+
+edge_features:
+  - dx
+  - dy
+  - length
+  - broken
+
+global_features:
+  - impact_x
+  - impact_y
+  - impact_force
+
+target:
+  edge: edge_break_probability
+  node: next_node_alive_probability

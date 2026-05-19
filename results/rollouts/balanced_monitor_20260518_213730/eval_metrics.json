@@ -1,0 +1,438 @@
+{
+  "rows": [
+    {
+      "target": "triangle_wedge",
+      "seed": 0,
+      "method": "random",
+      "final_iou": 0.9288,
+      "score": 0.8927,
+      "actions": 5,
+      "mean_force": 0.6455
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 0,
+      "method": "greedy",
+      "final_iou": 0.9894,
+      "score": 0.9835,
+      "actions": 5,
+      "mean_force": 0.2963
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9756,
+      "score": 0.9678,
+      "actions": 5,
+      "mean_force": 0.3446
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 0,
+      "method": "cem_oracle",
+      "final_iou": 0.974,
+      "score": 0.9687,
+      "actions": 5,
+      "mean_force": 0.2643
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 1,
+      "method": "random",
+      "final_iou": 0.934,
+      "score": 0.9023,
+      "actions": 5,
+      "mean_force": 0.5601
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 1,
+      "method": "greedy",
+      "final_iou": 0.974,
+      "score": 0.9698,
+      "actions": 5,
+      "mean_force": 0.2097
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.979,
+      "score": 0.9705,
+      "actions": 5,
+      "mean_force": 0.3817
+    },
+    {
+      "target": "triangle_wedge",
+      "seed": 1,
+      "method": "cem_oracle",
+      "final_iou": 0.9808,
+      "score": 0.9739,
+      "actions": 5,
+      "mean_force": 0.3434
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 0,
+      "method": "random",
+      "final_iou": 0.9549,
+      "score": 0.9293,
+      "actions": 5,
+      "mean_force": 0.5738
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 0,
+      "method": "greedy",
+      "final_iou": 0.9947,
+      "score": 0.9873,
+      "actions": 5,
+      "mean_force": 0.326
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9826,
+      "score": 0.9779,
+      "actions": 5,
+      "mean_force": 0.2362
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 0,
+      "method": "cem_oracle",
+      "final_iou": 0.9808,
+      "score": 0.971,
+      "actions": 5,
+      "mean_force": 0.3589
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 1,
+      "method": "random",
+      "final_iou": 0.9601,
+      "score": 0.9388,
+      "actions": 5,
+      "mean_force": 0.4903
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 1,
+      "method": "greedy",
+      "final_iou": 0.9843,
+      "score": 0.9792,
+      "actions": 5,
+      "mean_force": 0.2592
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9912,
+      "score": 0.9838,
+      "actions": 5,
+      "mean_force": 0.3735
+    },
+    {
+      "target": "diagonal_bevel",
+      "seed": 1,
+      "method": "cem_oracle",
+      "final_iou": 0.986,
+      "score": 0.9756,
+      "actions": 5,
+      "mean_force": 0.4323
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 0,
+      "method": "random",
+      "final_iou": 0.908,
+      "score": 0.8942,
+      "actions": 5,
+      "mean_force": 0.4505
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 0,
+      "method": "greedy",
+      "final_iou": 0.9653,
+      "score": 0.9536,
+      "actions": 5,
+      "mean_force": 0.5808
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9564,
+      "score": 0.9424,
+      "actions": 5,
+      "mean_force": 0.6029
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 0,
+      "method": "cem_oracle",
+      "final_iou": 0.9296,
+      "score": 0.9211,
+      "actions": 5,
+      "mean_force": 0.4258
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 1,
+      "method": "random",
+      "final_iou": 0.8681,
+      "score": 0.8276,
+      "actions": 5,
+      "mean_force": 0.6983
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 1,
+      "method": "greedy",
+      "final_iou": 0.9869,
+      "score": 0.9725,
+      "actions": 5,
+      "mean_force": 0.7224
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9514,
+      "score": 0.9398,
+      "actions": 5,
+      "mean_force": 0.5789
+    },
+    {
+      "target": "rectangle_cut",
+      "seed": 1,
+      "method": "cem_oracle",
+      "final_iou": 0.9278,
+      "score": 0.9182,
+      "actions": 5,
+      "mean_force": 0.4346
+    },
+    {
+      "target": "circular_notch",
+      "seed": 0,
+      "method": "random",
+      "final_iou": 0.9178,
+      "score": 0.9014,
+      "actions": 5,
+      "mean_force": 0.4946
+    },
+    {
+      "target": "circular_notch",
+      "seed": 0,
+      "method": "greedy",
+      "final_iou": 0.9636,
+      "score": 0.9486,
+      "actions": 5,
+      "mean_force": 0.6561
+    },
+    {
+      "target": "circular_notch",
+      "seed": 0,
+      "method": "cem_surrogate",
+      "final_iou": 0.9462,
+      "score": 0.9314,
+      "actions": 5,
+      "mean_force": 0.5544
+    },
+    {
+      "target": "circular_notch",
+      "seed": 0,
+      "method": "cem_oracle",
+      "final_iou": 0.9499,
+      "score": 0.9382,
+      "actions": 5,
+      "mean_force": 0.538
+    },
+    {
+      "target": "circular_notch",
+      "seed": 1,
+      "method": "random",
+      "final_iou": 0.8984,
+      "score": 0.8686,
+      "actions": 5,
+      "mean_force": 0.5977
+    },
+    {
+      "target": "circular_notch",
+      "seed": 1,
+      "method": "greedy",
+      "final_iou": 0.9725,
+      "score": 0.9574,
+      "actions": 5,
+      "mean_force": 0.7084
+    },
+    {
+      "target": "circular_notch",
+      "seed": 1,
+      "method": "cem_surrogate",
+      "final_iou": 0.9399,
+      "score": 0.9312,
+      "actions": 5,
+      "mean_force": 0.4367
+    },
+    {
+      "target": "circular_notch",
+      "seed": 1,
+      "method": "cem_oracle",
+      "final_iou": 0.9464,
+      "score": 0.9338,
+      "actions": 5,
+      "mean_force": 0.5381
+    }
+  ],
+  "summary": [
+    {
+      "target": "circular_notch",
+      "method": "cem_oracle",
+      "runs": 2,
+      "mean_final_iou": 0.9482,
+      "best_final_iou": 0.9499,
+      "mean_score": 0.936,
+      "mean_force": 0.5381
+    },
+    {
+      "target": "circular_notch",
+      "method": "cem_surrogate",
+      "runs": 2,
+      "mean_final_iou": 0.943,
+      "best_final_iou": 0.9462,
+      "mean_score": 0.9313,
+      "mean_force": 0.4955
+    },
+    {
+      "target": "circular_notch",
+      "method": "greedy",
+      "runs": 2,
+      "mean_final_iou": 0.9681,
+      "best_final_iou": 0.9725,
+      "mean_score": 0.953,
+      "mean_force": 0.6823
+    },
+    {
+      "target": "circular_notch",
+      "method": "random",
+      "runs": 2,
+      "mean_final_iou": 0.9081,
+      "best_final_iou": 0.9178,
+      "mean_score": 0.885,
+      "mean_force": 0.5462
+    },
+    {
+      "target": "diagonal_bevel",
+      "method": "cem_oracle",
+      "runs": 2,
+      "mean_final_iou": 0.9834,
+      "best_final_iou": 0.986,
+      "mean_score": 0.9733,
+      "mean_force": 0.3956
+    },
+    {
+      "target": "diagonal_bevel",
+      "method": "cem_surrogate",
+      "runs": 2,
+      "mean_final_iou": 0.9869,
+      "best_final_iou": 0.9912,
+      "mean_score": 0.9808,
+      "mean_force": 0.3049
+    },
+    {
+      "target": "diagonal_bevel",
+      "method": "greedy",
+      "runs": 2,
+      "mean_final_iou": 0.9895,
+      "best_final_iou": 0.9947,
+      "mean_score": 0.9832,
+      "mean_force": 0.2926
+    },
+    {
+      "target": "diagonal_bevel",
+      "method": "random",
+      "runs": 2,
+      "mean_final_iou": 0.9575,
+      "best_final_iou": 0.9601,
+      "mean_score": 0.9341,
+      "mean_force": 0.5321
+    },
+    {
+      "target": "rectangle_cut",
+      "method": "cem_oracle",
+      "runs": 2,
+      "mean_final_iou": 0.9287,
+      "best_final_iou": 0.9296,
+      "mean_score": 0.9197,
+      "mean_force": 0.4302
+    },
+    {
+      "target": "rectangle_cut",
+      "method": "cem_surrogate",
+      "runs": 2,
+      "mean_final_iou": 0.9539,
+      "best_final_iou": 0.9564,
+      "mean_score": 0.9411,
+      "mean_force": 0.5909
+    },
+    {
+      "target": "rectangle_cut",
+      "method": "greedy",
+      "runs": 2,
+      "mean_final_iou": 0.9761,
+      "best_final_iou": 0.9869,
+      "mean_score": 0.963,
+      "mean_force": 0.6516
+    },
+    {
+      "target": "rectangle_cut",
+      "method": "random",
+      "runs": 2,
+      "mean_final_iou": 0.8881,
+      "best_final_iou": 0.908,
+      "mean_score": 0.8609,
+      "mean_force": 0.5744
+    },
+    {
+      "target": "triangle_wedge",
+      "method": "cem_oracle",
+      "runs": 2,
+      "mean_final_iou": 0.9774,
+      "best_final_iou": 0.9808,
+      "mean_score": 0.9713,
+      "mean_force": 0.3038
+    },
+    {
+      "target": "triangle_wedge",
+      "method": "cem_surrogate",
+      "runs": 2,
+      "mean_final_iou": 0.9773,
+      "best_final_iou": 0.979,
+      "mean_score": 0.9691,
+      "mean_force": 0.3631
+    },
+    {
+      "target": "triangle_wedge",
+      "method": "greedy",
+      "runs": 2,
+      "mean_final_iou": 0.9817,
+      "best_final_iou": 0.9894,
+      "mean_score": 0.9767,
+      "mean_force": 0.253
+    },
+    {
+      "target": "triangle_wedge",
+      "method": "random",
+      "runs": 2,
+      "mean_final_iou": 0.9314,
+      "best_final_iou": 0.934,
+      "mean_score": 0.8975,
+      "mean_force": 0.6028
+    }
+  ]
+}

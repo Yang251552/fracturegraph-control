@@ -1,0 +1,22 @@
+grid_size: 32
+connectivity: eight_connected
+num_train: 120000
+num_val: 10000
+num_test: 10000
+episode_length: 6
+max_initial_damage: 0.05
+
+impact:
+  force_min: 0.2
+  force_max: 1.0
+  radius: 3.0
+
+material:
+  fracture_threshold_mean: 0.55
+  fracture_threshold_std: 0.08
+  noise_std: 0.03
+  damage_decay: 0.85
+  damage_gain: 0.45
+
+output:
+  path: data/lattice_32

@@ -1,0 +1,147 @@
+[
+  {
+    "target": "circular_notch",
+    "method": "cem_oracle",
+    "runs": 2,
+    "mean_final_iou": 0.9482,
+    "best_final_iou": 0.9499,
+    "mean_score": 0.936,
+    "mean_force": 0.5381
+  },
+  {
+    "target": "circular_notch",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.943,
+    "best_final_iou": 0.9462,
+    "mean_score": 0.9313,
+    "mean_force": 0.4955
+  },
+  {
+    "target": "circular_notch",
+    "method": "greedy",
+    "runs": 2,
+    "mean_final_iou": 0.9681,
+    "best_final_iou": 0.9725,
+    "mean_score": 0.953,
+    "mean_force": 0.6823
+  },
+  {
+    "target": "circular_notch",
+    "method": "random",
+    "runs": 2,
+    "mean_final_iou": 0.9081,
+    "best_final_iou": 0.9178,
+    "mean_score": 0.885,
+    "mean_force": 0.5462
+  },
+  {
+    "target": "diagonal_bevel",
+    "method": "cem_oracle",
+    "runs": 2,
+    "mean_final_iou": 0.9834,
+    "best_final_iou": 0.986,
+    "mean_score": 0.9733,
+    "mean_force": 0.3956
+  },
+  {
+    "target": "diagonal_bevel",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9869,
+    "best_final_iou": 0.9912,
+    "mean_score": 0.9808,
+    "mean_force": 0.3049
+  },
+  {
+    "target": "diagonal_bevel",
+    "method": "greedy",
+    "runs": 2,
+    "mean_final_iou": 0.9895,
+    "best_final_iou": 0.9947,
+    "mean_score": 0.9832,
+    "mean_force": 0.2926
+  },
+  {
+    "target": "diagonal_bevel",
+    "method": "random",
+    "runs": 2,
+    "mean_final_iou": 0.9575,
+    "best_final_iou": 0.9601,
+    "mean_score": 0.9341,
+    "mean_force": 0.5321
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_oracle",
+    "runs": 2,
+    "mean_final_iou": 0.9287,
+    "best_final_iou": 0.9296,
+    "mean_score": 0.9197,
+    "mean_force": 0.4302
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9539,
+    "best_final_iou": 0.9564,
+    "mean_score": 0.9411,
+    "mean_force": 0.5909
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "greedy",
+    "runs": 2,
+    "mean_final_iou": 0.9761,
+    "best_final_iou": 0.9869,
+    "mean_score": 0.963,
+    "mean_force": 0.6516
+  },
+  {
+    "target": "rectangle_cut",
+    "method": "random",
+    "runs": 2,
+    "mean_final_iou": 0.8881,
+    "best_final_iou": 0.908,
+    "mean_score": 0.8609,
+    "mean_force": 0.5744
+  },
+  {
+    "target": "triangle_wedge",
+    "method": "cem_oracle",
+    "runs": 2,
+    "mean_final_iou": 0.9774,
+    "best_final_iou": 0.9808,
+    "mean_score": 0.9713,
+    "mean_force": 0.3038
+  },
+  {
+    "target": "triangle_wedge",
+    "method": "cem_surrogate",
+    "runs": 2,
+    "mean_final_iou": 0.9773,
+    "best_final_iou": 0.979,
+    "mean_score": 0.9691,
+    "mean_force": 0.3631
+  },
+  {
+    "target": "triangle_wedge",
+    "method": "greedy",
+    "runs": 2,
+    "mean_final_iou": 0.9817,
+    "best_final_iou": 0.9894,
+    "mean_score": 0.9767,
+    "mean_force": 0.253
+  },
+  {
+    "target": "triangle_wedge",
+    "method": "random",
+    "runs": 2,
+    "mean_final_iou": 0.9314,
+    "best_final_iou": 0.934,
+    "mean_score": 0.8975,
+    "mean_force": 0.6028
+  }
+]
+Wrote report to /home/ubuntu/fracturegraph-control/results/rollouts/balanced_monitor_20260518_213730/report.html

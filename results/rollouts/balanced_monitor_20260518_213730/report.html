@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FractureGraph-Control Report</title>
+  <style>
+    body { margin: 0; font-family: Inter, Arial, sans-serif; color: #20242a; background: #f7f9fb; }
+    main { max-width: 1180px; margin: 0 auto; padding: 36px 24px 60px; }
+    h1 { font-size: 30px; margin: 0 0 8px; }
+    p { color: #56606d; line-height: 1.55; }
+    table { border-collapse: collapse; background: white; width: 100%; margin: 24px 0; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e6e9ee; text-align: left; font-size: 14px; }
+    th { background: #eef2f6; }
+    figure { margin: 26px 0; background: white; padding: 16px; border: 1px solid #e3e7ed; }
+    img { max-width: 100%; display: block; }
+    figcaption { margin-top: 8px; color: #687381; font-size: 13px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>FractureGraph-Control</h1>
+  <p>Compact 2D fracture-control prototype with graph data, learned surrogate hooks, CEM planning, and rollout diagnostics.</p>
+  <table>
+    <thead><tr><th>target</th><th>method</th><th>runs</th><th>mean_final_iou</th><th>best_final_iou</th><th>mean_score</th><th>mean_force</th></tr></thead>
+    <tbody><tr><td>circular_notch</td><td>cem_oracle</td><td>2</td><td>0.9482</td><td>0.9499</td><td>0.936</td><td>0.5381</td></tr><tr><td>circular_notch</td><td>cem_surrogate</td><td>2</td><td>0.943</td><td>0.9462</td><td>0.9313</td><td>0.4955</td></tr><tr><td>circular_notch</td><td>greedy</td><td>2</td><td>0.9681</td><td>0.9725</td><td>0.953</td><td>0.6823</td></tr><tr><td>circular_notch</td><td>random</td><td>2</td><td>0.9081</td><td>0.9178</td><td>0.885</td><td>0.5462</td></tr><tr><td>diagonal_bevel</td><td>cem_oracle</td><td>2</td><td>0.9834</td><td>0.986</td><td>0.9733</td><td>0.3956</td></tr><tr><td>diagonal_bevel</td><td>cem_surrogate</td><td>2</td><td>0.9869</td><td>0.9912</td><td>0.9808</td><td>0.3049</td></tr><tr><td>diagonal_bevel</td><td>greedy</td><td>2</td><td>0.9895</td><td>0.9947</td><td>0.9832</td><td>0.2926</td></tr><tr><td>diagonal_bevel</td><td>random</td><td>2</td><td>0.9575</td><td>0.9601</td><td>0.9341</td><td>0.5321</td></tr><tr><td>rectangle_cut</td><td>cem_oracle</td><td>2</td><td>0.9287</td><td>0.9296</td><td>0.9197</td><td>0.4302</td></tr><tr><td>rectangle_cut</td><td>cem_surrogate</td><td>2</td><td>0.9539</td><td>0.9564</td><td>0.9411</td><td>0.5909</td></tr><tr><td>rectangle_cut</td><td>greedy</td><td>2</td><td>0.9761</td><td>0.9869</td><td>0.963</td><td>0.6516</td></tr><tr><td>rectangle_cut</td><td>random</td><td>2</td><td>0.8881</td><td>0.908</td><td>0.8609</td><td>0.5744</td></tr><tr><td>triangle_wedge</td><td>cem_oracle</td><td>2</td><td>0.9774</td><td>0.9808</td><td>0.9713</td><td>0.3038</td></tr><tr><td>triangle_wedge</td><td>cem_surrogate</td><td>2</td><td>0.9773</td><td>0.979</td><td>0.9691</td><td>0.3631</td></tr><tr><td>triangle_wedge</td><td>greedy</td><td>2</td><td>0.9817</td><td>0.9894</td><td>0.9767</td><td>0.253</td></tr><tr><td>triangle_wedge</td><td>random</td><td>2</td><td>0.9314</td><td>0.934</td><td>0.8975</td><td>0.6028</td></tr></tbody>
+  </table>
+  <figure><img src="triangle_wedge.seed_0.random.svg" alt="rollout"><figcaption>triangle_wedge.seed_0.random.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_0.greedy.svg" alt="rollout"><figcaption>triangle_wedge.seed_0.greedy.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_0.cem_surrogate.svg" alt="rollout"><figcaption>triangle_wedge.seed_0.cem_surrogate.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_0.cem_oracle.svg" alt="rollout"><figcaption>triangle_wedge.seed_0.cem_oracle.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.random.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.random.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.greedy.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.greedy.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.cem_surrogate.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.cem_surrogate.svg</figcaption></figure>
+<figure><img src="triangle_wedge.seed_1.cem_oracle.svg" alt="rollout"><figcaption>triangle_wedge.seed_1.cem_oracle.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_0.random.svg" alt="rollout"><figcaption>diagonal_bevel.seed_0.random.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_0.greedy.svg" alt="rollout"><figcaption>diagonal_bevel.seed_0.greedy.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_0.cem_surrogate.svg" alt="rollout"><figcaption>diagonal_bevel.seed_0.cem_surrogate.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_0.cem_oracle.svg" alt="rollout"><figcaption>diagonal_bevel.seed_0.cem_oracle.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.random.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.random.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.greedy.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.greedy.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.cem_surrogate.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.cem_surrogate.svg</figcaption></figure>
+<figure><img src="diagonal_bevel.seed_1.cem_oracle.svg" alt="rollout"><figcaption>diagonal_bevel.seed_1.cem_oracle.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_0.random.svg" alt="rollout"><figcaption>rectangle_cut.seed_0.random.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_0.greedy.svg" alt="rollout"><figcaption>rectangle_cut.seed_0.greedy.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_0.cem_surrogate.svg" alt="rollout"><figcaption>rectangle_cut.seed_0.cem_surrogate.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_0.cem_oracle.svg" alt="rollout"><figcaption>rectangle_cut.seed_0.cem_oracle.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_1.random.svg" alt="rollout"><figcaption>rectangle_cut.seed_1.random.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_1.greedy.svg" alt="rollout"><figcaption>rectangle_cut.seed_1.greedy.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_1.cem_surrogate.svg" alt="rollout"><figcaption>rectangle_cut.seed_1.cem_surrogate.svg</figcaption></figure>
+<figure><img src="rectangle_cut.seed_1.cem_oracle.svg" alt="rollout"><figcaption>rectangle_cut.seed_1.cem_oracle.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_0.random.svg" alt="rollout"><figcaption>circular_notch.seed_0.random.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_0.greedy.svg" alt="rollout"><figcaption>circular_notch.seed_0.greedy.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_0.cem_surrogate.svg" alt="rollout"><figcaption>circular_notch.seed_0.cem_surrogate.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_0.cem_oracle.svg" alt="rollout"><figcaption>circular_notch.seed_0.cem_oracle.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_1.random.svg" alt="rollout"><figcaption>circular_notch.seed_1.random.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_1.greedy.svg" alt="rollout"><figcaption>circular_notch.seed_1.greedy.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_1.cem_surrogate.svg" alt="rollout"><figcaption>circular_notch.seed_1.cem_surrogate.svg</figcaption></figure>
+<figure><img src="circular_notch.seed_1.cem_oracle.svg" alt="rollout"><figcaption>circular_notch.seed_1.cem_oracle.svg</figcaption></figure>
+</main>
+</body>
+</html>

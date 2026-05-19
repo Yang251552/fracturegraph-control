@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+.pycache_tmp/
+*.py[cod]
+.venv/
+implementation-spec.md
+data/*/*.pt
+data/*/*.jsonl
+data/*/metadata.json
+results/checkpoints/

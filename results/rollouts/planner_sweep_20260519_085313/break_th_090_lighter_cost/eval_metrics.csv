@@ -1,0 +1,5 @@
+target,seed,method,final_iou,score,actions,mean_force,undercut,overbreak
+rectangle_cut,0,cem_surrogate,0.9479,0.9398,5,0.5454,0.6042,0.0
+rectangle_cut,1,cem_surrogate,0.9329,0.9258,5,0.4701,0.7917,0.0
+circular_notch,0,cem_surrogate,0.9365,0.9291,5,0.4326,0.7955,0.0019
+circular_notch,1,cem_surrogate,0.9497,0.9376,5,0.624,0.5682,0.0056
