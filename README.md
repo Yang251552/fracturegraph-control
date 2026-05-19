@@ -19,6 +19,15 @@ main data and control interfaces concrete: generate fracture transitions, train
 a graph surrogate, plan through the learned model, and measure the final shape
 against a target geometry.
 
+This is the fourth repo in a small preparation set:
+
+| Repo | Role |
+| --- | --- |
+| [`isaac-lab-manipulation`](https://github.com/Yang251552/isaac-lab-manipulation) | Standard Isaac Lab + `rsl_rl` manipulation baseline. |
+| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | Granular excavation attempt with a self-built simulation and training loop. |
+| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | Contact-rich manipulation diagnostic inside Isaac Lab using a rigid-body granular proxy. |
+| this repo | Graph fracture surrogate and target-shape planning loop. |
+
 ## Project Fit
 
 | Target project component | This repository |
@@ -29,14 +38,9 @@ against a target geometry.
 | Desired rock geometry | Binary target masks with IoU, undercut, overbreak, and force-cost metrics. |
 | 2D/3D shapes and online material adaptation | Current implementation is 2D only. 3D geometry and parameter adaptation are left as next steps. |
 
-The surrounding preparation repos cover adjacent parts of the same stack:
-
-| Repo | Role in the preparation set |
-| --- | --- |
-| [`isaac-lab-manipulation`](https://github.com/Yang251552/isaac-lab-manipulation) | Standard Isaac Lab + `rsl_rl` manipulation baseline. |
-| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | Earlier granular excavation attempt with a self-built substrate and training loop. |
-| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | Contact-rich manipulation diagnostic inside Isaac Lab with a small rigid-body granular proxy. |
-| this repo | Graph surrogate learning and target-driven material reshaping loop. |
+Within the set, this repo is the one closest to the final proposal's
+fracture-prediction and target-shape-control loop. The earlier repos cover the
+robot-learning baseline and contact-rich manipulation context.
 
 ## Implemented Components
 
