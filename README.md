@@ -1,9 +1,9 @@
 # FractureGraph-Control
 
-FractureGraph-Control is a small preparation project for the RSL topic
-**AI-Driven Rock Reshaping Simulation and Control**. The project description
-combines FEM fracture simulation, supervised GNN dynamics learning, and an RL
-controller that chooses impact or drilling actions toward a desired rock shape.
+FractureGraph-Control is a small preparation project for **AI-Driven Rock
+Reshaping Simulation and Control**. The project description combines FEM
+fracture simulation, supervised GNN dynamics learning, and an RL controller
+that chooses impact or drilling actions toward a desired rock shape.
 
 This repository implements a smaller 2D version of that pipeline:
 
@@ -19,13 +19,14 @@ main data and control interfaces concrete: generate fracture transitions, train
 a graph surrogate, plan through the learned model, and measure the final shape
 against a target geometry.
 
-This is the fourth repo in a small preparation set:
+This is the fourth repo in a small preparation set around robot learning,
+contact-rich manipulation, and material reshaping:
 
-| Repo | Role |
+| Repo | Focus |
 | --- | --- |
-| [`isaac-lab-manipulation`](https://github.com/Yang251552/isaac-lab-manipulation) | Standard Isaac Lab + `rsl_rl` manipulation baseline. |
-| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | Granular excavation attempt with a self-built simulation and training loop. |
-| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | Contact-rich manipulation diagnostic inside Isaac Lab using a rigid-body granular proxy. |
+| [`isaac-lab-manipulation`](https://github.com/Yang251552/isaac-lab-manipulation) | Standard Isaac Lab manipulation baseline with `rsl_rl`. |
+| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | Custom granular excavation environment and PPO training loop. |
+| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | Isaac Lab contact-rich manipulation diagnostic using a rigid-body granular proxy. |
 | this repo | Graph fracture surrogate and target-shape planning loop. |
 
 ## Project Fit
@@ -38,7 +39,7 @@ This is the fourth repo in a small preparation set:
 | Desired rock geometry | Binary target masks with IoU, undercut, overbreak, and force-cost metrics. |
 | 2D/3D shapes and online material adaptation | Current implementation is 2D only. 3D geometry and parameter adaptation are left as next steps. |
 
-Within the set, this repo is the one closest to the final proposal's
+Within the set, this repo is the one closest to the target project's
 fracture-prediction and target-shape-control loop. The earlier repos cover the
 robot-learning baseline and contact-rich manipulation context.
 
@@ -73,6 +74,31 @@ Selected surrogate run:
 - validation edge F1: `0.871`
 - validation selection score: `0.9157`
 
+### Training Sweep
+
+The training sweep was small and driven by the validation behavior rather than
+by a large hyperparameter search. The first balanced run already learned a
+usable fracture signal, but it peaked early and then flattened. The follow-up
+runs reduced the learning rate and increased dropout in small steps, using a
+weighted selection score:
+
+```text
+selection_score = 0.65 * val/edge_f1 + 0.35 * val/node_iou
+```
+
+| W&B run | Change from previous attempt | Best validation | Decision |
+| --- | --- | --- | --- |
+| [`ixmf3u6q`](https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/ixmf3u6q) | `lr=4e-4`, `dropout=0.05` baseline balanced run | edge F1 `0.868`, precision/recall `0.818/0.924`, score `0.9137` | Good first signal, but the run plateaued after the early peak. |
+| [`524mg3ns`](https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/524mg3ns) | lower LR to `2.8e-4`, raise dropout to `0.07` | edge F1 `0.871`, precision/recall `0.834/0.912`, score `0.9157` | Selected: slightly better F1 and score, with better precision. |
+| [`r9g6ad4h`](https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/r9g6ad4h) | lower LR again to `1.96e-4`, dropout `0.09` | edge F1 `0.860`, precision/recall `0.798/0.933`, score `0.9085` | More recall, but worse precision and lower score. |
+| [`bwgmxjw2`](https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/bwgmxjw2) | lower LR to `1.372e-4`, dropout `0.10` | edge F1 `0.869`, precision/recall `0.871/0.866`, score `0.9138` | More conservative and close, but still below `524mg3ns`. |
+| [`4wo6hwn4`](https://wandb.ai/yangchenghan2515-eth-z-rich/fracturegraph-control/runs/4wo6hwn4) | lower LR to `9.604e-5`, dropout `0.10` | stopped early | Further LR reduction was not improving the balanced score. |
+
+Model selection used both validation metrics and rollout behavior. `524mg3ns`
+had the best weighted validation score, and its rollouts kept enough edge
+recall to cut the simple targets without becoming as conservative as some of
+the lower-learning-rate attempts.
+
 The selected checkpoint used for the recorded rollout was:
 
 ```text
@@ -82,6 +108,8 @@ results/checkpoints/balanced_monitor_20260518_213730/surrogate_best.pt
 This checkpoint is not included in the repository. The repo keeps generated
 figures and rollout reports, but ignores datasets and model checkpoints.
 
+### Rollout Interpretation
+
 Surrogate-CEM rollout summary:
 
 | Target | Mean final IoU | Main observation |
@@ -90,6 +118,14 @@ Surrogate-CEM rollout summary:
 | `diagonal_bevel` | `0.9869` | Transfers well. |
 | `rectangle_cut` | `0.9539` | Planner tends to leave some target-removal cells alive. |
 | `circular_notch` | `0.9430` | Curved boundary is harder for the current surrogate/planner. |
+
+The main result is that the learned surrogate is good enough for short-horizon
+planning on the simpler target geometries, but the current planner is too
+conservative on the harder cuts. In the `triangle_wedge` and `diagonal_bevel`
+cases, the target boundary is mostly straight and can be reached by a small
+number of strong impacts. For `rectangle_cut` and `circular_notch`, the planner
+often preserves too much material inside the desired removal region. The error
+breakdown is mainly undercut, not overbreak.
 
 ![Rollout IoU by target](results/figures/balanced_20260519/rollout_iou_by_target.svg)
 
@@ -112,9 +148,15 @@ The planner-side threshold sweep is kept in:
 - `results/rollouts/planner_sweep_20260519_085313/sweep_summary.csv`
 - `results/rollouts/planner_verify_light_20260519_123026/sweep_summary.csv`
 
-The short version is that lowering the surrogate break threshold to `0.90`
-helps `rectangle_cut` in some seeds, but was not stable enough to make it a
-global default.
+The sweep tested whether this conservative behavior could be fixed at planning
+time. Lowering the surrogate break threshold to `0.90` made the planner more
+willing to cut. In the four-seed verification, it improved `rectangle_cut` mean
+IoU from `0.9365` to `0.9415` and reduced undercut from `0.7344` to `0.6614`.
+The same change slightly hurt `circular_notch`, where mean IoU moved from
+`0.9473` to `0.9457`. A horizon-6, larger-budget variant reduced rectangle
+undercut a little more but damaged circular-notch behavior. For that reason,
+the repository keeps the checkpoint-threshold behavior as the default and
+records `0.90` as a target-specific candidate for `rectangle_cut`.
 
 ## Running The Code
 
